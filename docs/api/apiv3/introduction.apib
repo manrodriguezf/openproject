@@ -10,7 +10,7 @@ We try to keep stable releases of OpenProject with changes to this API backwards
 
 ## Hypermedia REST API
 
-The APIv3 is a hypermedia REST API, a shorthand for "Hypermedia As The Engine Of Application State" (HATEOAS).
+The API v3 is a hypermedia REST API, a shorthand for "Hypermedia As The Engine Of Application State" (HATEOAS).
 This means that each endpoint of this API will have links to other resources or actions defined in the resulting body.
 
 These related resources and actions for any given resource will be context sensitive. For example, only actions that the
@@ -90,7 +90,7 @@ However, OpenProject already has supported API keys in the past for the API v2, 
 Using **username and password** directly would have some advantages:
 
 * It is intuitive for the user who then just has to provide those just as they would when logging into OpenProject.
-* No extra logic for token managment necessary.
+* No extra logic for token management necessary.
 
 On the other hand using **API keys** has some advantages too, which is why we went for that:
 
@@ -111,4 +111,4 @@ through an OpenID Connect provider.
 
 Responses are compressed if requested by the client. Currently [gzip](http://www.gzip.org/) and [deflate](https://tools.ietf.org/html/rfc1951)
 are supported. The client signals the desired compression by setting the [`Accept-Encoding` header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3).
-If no `Accept-Encoding` header is send, `Accept-Encoding: identity` is assumed which will result in the API responding uncompressed.
+If no `Accept-Encoding` header is sent, `Accept-Encoding: identity` is assumed which will result in the API responding uncompressed.
